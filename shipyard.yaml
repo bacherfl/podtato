@@ -13,7 +13,7 @@ spec:
     sequences:
     - name: evaluation
       triggeredOn:
-      - dev.evaluation.finished
+      - event: dev.evaluation.finished
       tasks:
       - name: evaluation
       - name: release
@@ -22,7 +22,7 @@ spec:
     sequences:
     - name: artifact-delivery 
       triggeredOn:
-      - hardening.artifact-delivery.finished
+      - event: hardening.artifact-delivery.finished
       tasks:
       - name: deployment
         properties:
