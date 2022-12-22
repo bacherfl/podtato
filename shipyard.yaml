@@ -6,14 +6,14 @@ spec:
   stages:
   - name: dev
     sequences:
-    - name: artifact-delivery
+    - name: evaluation
       tasks:
       - name: evaluation 
   - name: hardening
     sequences:
-    - name: artifact-delivery
+    - name: evaluation
       triggers:
-      - dev.artifact-delivery.finished
+      - dev.evaluation.finished
       tasks:
       - name: evaluation
       - name: release
