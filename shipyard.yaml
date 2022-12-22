@@ -14,6 +14,7 @@ spec:
     - name: artifact-delivery
       triggers:
       - dev.artifact-delivery.finished
+      tasks:
       - name: evaluation
       - name: release
         
