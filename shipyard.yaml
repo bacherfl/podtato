@@ -12,7 +12,7 @@ spec:
   - name: hardening
     sequences:
     - name: evaluation
-      triggers:
+      triggeredOn:
       - dev.evaluation.finished
       tasks:
       - name: evaluation
@@ -21,7 +21,7 @@ spec:
   - name: production
     sequences:
     - name: artifact-delivery 
-      triggers:
+      triggeredOn:
       - hardening.artifact-delivery.finished
       tasks:
       - name: deployment
